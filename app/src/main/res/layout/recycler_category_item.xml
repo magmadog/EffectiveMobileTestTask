@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_category_image"
+            android:layout_width="71dp"
+            android:layout_height="71dp"
+            app:cornerRadius="@dimen/button_radius"
+            android:layout_margin="8dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+            app:icon="@drawable/ic_profile"
+            app:iconTint="@color/select_category_icon"
+            android:backgroundTint="@color/white"
+            app:iconSize="32dp"/>
+
+        <TextView
+            android:id="@+id/tv_category_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/phones"
+            android:textColor="@color/dark_blue"
+            android:textSize="12sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+</LinearLayout>

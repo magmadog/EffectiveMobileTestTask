@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".ui.CartActivity">
+
+    <LinearLayout
+        android:id="@+id/product_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/margin_standart_value"
+        android:layout_marginEnd="@dimen/margin_standart_value"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="36dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            app:cornerRadius="@dimen/button_product_detail_radius"
+            app:icon="@drawable/ic_back"
+            android:backgroundTint="@color/dark_blue"
+            app:iconSize="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="@string/add_address"
+            android:textAlignment="textEnd"
+            android:textColor="@color/dark_blue"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            app:cornerRadius="@dimen/button_product_detail_radius"
+            app:icon="@drawable/ic_location"
+            app:iconTint="@color/white"
+            android:backgroundTint="@color/orange"
+            app:iconSize="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_standart_value"
+        android:layout_marginTop="@dimen/margin_standart_value"
+        android:layout_marginBottom="@dimen/margin_standart_value"
+        android:text="@string/my_cart_label"
+        android:textSize="35sp"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/product_details_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/product_details_toolbar"
+        android:gravity="center"
+        android:orientation="vertical"
+        style="@style/CartTheme"
+        android:background="@drawable/bg_dark_blue_rounded">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standart_value"
+                android:paddingEnd="52dp"
+                android:text="Galaxy Note 20 Ultra"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="32dp"
+                android:layout_height="42dp"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/orange"
+                android:gravity="end"
+                android:padding="8dp"
+                app:cornerRadius="@dimen/button_product_detail_radius"
+                app:icon="@drawable/ic_favourite"
+                app:iconSize="17dp"
+                app:iconTint="@color/white" />
+
+        </LinearLayout>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_standart_value"
+            android:numStars="5"
+            android:rating="5"
+            android:scrollbarSize="18dp"
+            style="@style/RatingBar"/>
+
+        <RadioGroup
+            android:id="@+id/set_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_standart_value"
+            android:paddingEnd="@dimen/margin_standart_value"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/onse_set"
+                android:button="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="@string/radiobutton_product_detail_shop"
+                />
+            <RadioButton
+                android:button="@android:color/transparent"
+                android:id="@+id/two_sets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="@string/radiobutton_product_detail_details"
+                />
+            <RadioButton
+                android:button="@android:color/transparent"
+                android:id="@+id/three_sets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="@string/radiobutton_product_detail_features"
+                />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/product_characteristics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/margin_standart_value"
+            android:layout_marginEnd="@dimen/margin_standart_value">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_processor" />
+
+                <TextView
+                    android:id="@+id/tv_processor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="proccessor"
+                    android:textColor="@color/select_category_icon"
+                    android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:id="@+id/tv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="camera"
+                    android:textColor="@color/select_category_icon"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/memory" />
+
+                <TextView
+                    android:id="@+id/tv_ram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="ram"
+                    android:textColor="@color/select_category_icon"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_card" />
+
+                <TextView
+                    android:id="@+id/tv_memory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="memory"
+                    android:textColor="@color/select_category_icon"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/product_details_select_color_and_capacity"
+            android:textSize="16sp"
+            android:paddingStart="@dimen/margin_standart_value"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_standart_value"
+            android:layout_marginEnd="@dimen/margin_standart_value">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:padding="5dp"
+                    app:cornerRadius="@dimen/button_radius"
+                    android:backgroundTint="@color/orange"
+                    app:iconSize="20dp"/>
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="128 GB"
+                    android:button="@android:color/transparent"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="256 GB"
+                    android:button="@android:color/transparent"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="@dimen/margin_standart_value"
+            android:layout_marginEnd="@dimen/margin_standart_value"
+            android:layout_marginBottom="@dimen/margin_standart_value"
+            android:backgroundTint="@color/orange"
+            android:textAllCaps="false"
+            android:text="@string/checkout_button_label"
+            app:cornerRadius="@dimen/button_product_detail_radius"
+            app:iconSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_radius">50dp</dimen>
+    <dimen name="margin_standart_size">8dp</dimen>
+    <dimen name="card_radius">20dp</dimen>
+    <dimen name="button_product_detail_radius">10dp</dimen>
+    <dimen name="panel_product_detail_radius">30dp</dimen>
+    <dimen name="margin_standart_value">38dp</dimen>
+    <dimen name="bottom_nav_panel">25dp</dimen>
+    <dimen name="last_product_padding_size">60dp</dimen>
+</resources>
