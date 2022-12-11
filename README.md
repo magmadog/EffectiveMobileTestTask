@@ -12,4 +12,4 @@ Using tools:
 
 Screens:
 
-![Иллюстрация к проекту]([https://github.com/magmadog/EffectiveMobileTestTask/images/main.png](https://github.com/magmadog/EffectiveMobileTestTask/blob/master/images/main.png))
+<img src="images/main.png" width="400">
